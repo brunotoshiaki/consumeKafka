@@ -12,8 +12,9 @@ public class StrConsumerListener {
 
 
   @StrConsumerCustomListener(groupId = "group-1")
-  public void create(String message) {
+  public void create(String message)  {
     log.info("CREATE ::: Receive message {}", message);
+    throw new IllegalArgumentException("EXEPTION....");
   }
 
   @StrConsumerCustomListener(groupId = "group-1")
